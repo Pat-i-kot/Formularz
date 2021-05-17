@@ -1,4 +1,5 @@
-import "./App.css";
+import "./styles/style.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import fetchCountries from "./Func/fetch";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
