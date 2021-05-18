@@ -1,6 +1,7 @@
 import axios from "axios";
+import { post, postSuccess, postFail } from "../Actions/dataUpdate";
 
-const fetchCountries = (dispatch) => {
+export const fetchCountries = (dispatch) => {
   return axios
     .get("https://api.first.org/data/v1/countries")
     .then((response) => {
@@ -23,4 +24,33 @@ const fetchCountries = (dispatch) => {
     });
 };
 
-export default fetchCountries;
+export const postForm = (
+  { firstName, lastName, email, password, country },
+  dispatch
+) => {
+  dispatch(post());
+  return axios
+    .post("http://localhost:5000/form", {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+      country: country,
+    })
+    .then((res) => {
+      if (
+        firstName === res.data.firstName &&
+        lastName === res.data.lastName &&
+        email === res.data.email &&
+        password === res.data.password &&
+        country === res.data.country
+      ) {
+        dispatch(postSuccess());
+      } else {
+        dispatch(postFail());
+      }
+    })
+    .catch((error) => {
+      dispatch(postFail());
+    });
+};

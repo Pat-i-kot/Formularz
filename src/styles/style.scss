@@ -1,0 +1,35 @@
+*,
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+$primaryColor: rgb(94, 0, 0);
+$backgroundColor: rgb(245, 148, 148);
+
+.errorMessages {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: $primaryColor;
+  background-color: $backgroundColor;
+  border-radius: 0.25rem;
+}
+
+.errorLabel {
+  color: $primaryColor;
+}
+
+.errorInput {
+  color: $primaryColor !important;
+  border: 0.1rem solid $primaryColor !important;
+}
+
+#submitBtn {
+  padding: 0.5rem;
+  color: rgb(0, 74, 99);
+  background-color: lightblue;
+  border-radius: 0.25rem;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}

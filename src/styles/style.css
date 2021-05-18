@@ -1,1 +1,34 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+*,
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.errorMessages {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  color: #5e0000;
+  background-color: #f59494;
+  border-radius: 0.25rem;
+}
+
+.errorLabel {
+  color: #5e0000;
+}
+
+.errorInput {
+  color: #5e0000 !important;
+  border: 0.1rem solid #5e0000 !important;
+}
+
+#submitBtn {
+  padding: 0.5rem;
+  color: #004a63;
+  background-color: lightblue;
+  border-radius: 0.25rem;
+}
+
+#submitBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+/*# sourceMappingURL=style.css.map */
